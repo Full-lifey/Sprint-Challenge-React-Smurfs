@@ -5,6 +5,7 @@ import { Route, Link, NavLink, withRouter } from 'react-router-dom';
 import SmurfForm from './components/SmurfForm';
 import Smurfs from './components/Smurfs';
 import EditSmurf from './components/EditSmurf';
+import EachSmurf from './components/EachSmurf';
 
 import './App.css';
 
@@ -96,6 +97,10 @@ class App extends Component {
               submitEditSmurf={this.submitEditSmurf}
             />
           )}
+        />
+        <Route
+          path='/smurfs/:id'
+          render={props => <EachSmurf {...props} smurfs={this.state.smurfs} />}
         />
         <Link to='/'>Smurf List</Link>
         <Link to='/smurf-form'>Add Smurf</Link>
