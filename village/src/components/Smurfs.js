@@ -23,6 +23,9 @@ class Smurfs extends Component {
                 <button onClick={e => this.props.deleteSmurf(e, smurf.id)}>
                   Delete
                 </button>
+                <button onClick={e => this.props.editSmurfForm(e, smurf)}>
+                  Edit
+                </button>
               </div>
             );
           })}
